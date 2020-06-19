@@ -1,1 +1,49 @@
 2020.6.16
+
+CS-61B:
+1.没有构造函数的类需要声明为static吗？static在什么情况下用？
+  static methods are invoked using class name. non-static methods cannot be invoked by class name!
+  如果是通过class名调用而不实例化，就只能是static
+  static methods不能直接使用instance variables，只能通过对象来调用instance variables2.
+
+2.在不知道列表长度的时候只能用这个：
+  List<Planet> planets = new ArrayList<>();
+  import java.util.ArrayList;
+  import java.util.List;
+  
+  Arraylist转成array：
+  Planet[] results = new Planet[planets.size()];
+    	for (int i = 0; i < planets.size(); ++i) 
+    	{
+      	results[i] = planets.get(i);
+    	}
+3.字符串可以直接用“+”相连：“images/”+this.filename
+
+4.使用类内方法时，不需要用this调用？或者因为本方法是static？
+
+5.Read command line arguments:
+  args[i]----String格式
+  若要转成double格式：double t = double.parseDouble(args[i])
+
+6.Java读文本文件：
+  In in = new In(filename)；   filename是string 类型
+  只能按顺序读，一次read读一次 
+  in.readInt();in.readDouble();in.readString();
+  
+7.设置一个全局常变量：
+  private final static double G = 6.67e-11;
+  
+8.对象的赋值操作是把对象的地址进行赋值，也就是说这两个参数都指向一个对象，对任何一个参数操作都会改变对象
+
+9.函数参数传递：pass by values（copy）
+
+10.Java arrays[数组] are also objects. If we reassign A to something else, we'll never be able to get the original array back.
+  when we initiate an array, we need to allocate a specific length number to the array. Java array is of a fixed size.
+  But Lists can grow arbitrarily large.
+  
+  
+
+
+  
+
+  
